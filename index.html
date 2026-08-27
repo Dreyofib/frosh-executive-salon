@@ -1,75 +1,631 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>My project</title>
+<html lang="en">
   <link rel="stylesheet" href="style.css">
- </head>
- <body>
-   
-      <h1>Frosh Executive Salon</h1>
- <p>Look Good. Feel Confident.</p>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <p>FROSH EXECUTIVE SALON is a professional hair and beauty salon in Oye, Ekiti, dedicated to helping you look and feel your best. We offer quality hairstyling, haircuts, beard trims, braids, dreadlocks, manicure, pedicure, and other beauty services in a comfortable and welcoming environment.
+    <title>Lagos AutoHub | Quality Cars in Lagos</title>
 
-Whether you need a fresh haircut, a new hairstyle, or a complete beauty makeover, our team is ready to give you a stylish and satisfying experience.</p>
+    <meta name="description" content="Lagos AutoHub - Quality foreign and locally used cars for sale in Lagos, Nigeria.">
 
-<h2>Our services</h2>
-       <ul>
-          <li>Dreadlocks</li>
-           <li>Beard trim</li>
-            <li>Manicure & Pedicure</li>
-              <li>Haircut</li>
-               <li>Braids</li>
-       </ul>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="container nav-content">
+
+            <a href="#" class="logo">
+                <span class="logo-icon">LA</span>
+                <span>Lagos<span>AutoHub</span></span>
+            </a>
+
+            <nav id="navMenu">
+                <a href="#home">Home</a>
+                <a href="#cars">Cars</a>
+                <a href="#about">About</a>
+                <a href="#why-us">Why Us</a>
+                <a href="#reviews">Reviews</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
+            <a href="https://wa.me/2348012345678" class="nav-button" target="_blank">
+                WhatsApp Us
+            </a>
+
+            <button class="menu-button" id="menuButton">☰</button>
+
+        </div>
+    </header>
+
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+
+        <div class="hero-overlay"></div>
+
+        <div class="container hero-content">
+
+            <div class="hero-text">
+
+                <div class="hero-badge">
+                    🚘 Trusted Car Dealer in Lagos
+                </div>
+
+                <h1>
+                    Find Your
+                    <span>Dream Car.</span>
+                </h1>
+
+                <p>
+                    Quality foreign-used and locally-used vehicles
+                    carefully selected for Nigerian roads.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#cars" class="primary-button">
+                        Explore Cars
+                    </a>
+
+                    <a href="https://wa.me/2348012345678" class="secondary-button" target="_blank">
+                        Chat on WhatsApp
+                    </a>
+                </div>
+
+                <div class="hero-stats">
+                    <div>
+                        <strong>150+</strong>
+                        <small>Cars Sold</small>
+                    </div>
+
+                    <div>
+                        <strong>100%</strong>
+                        <small>Verified Cars</small>
+                    </div>
+
+                    <div>
+                        <strong>5★</strong>
+                        <small>Customer Service</small>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- SEARCH -->
+    <section class="search-section">
+
+        <div class="container">
+
+            <div class="search-box">
+
+                <div class="search-title">
+                    <h2>Find Your Next Car</h2>
+                    <p>Search our available vehicles</p>
+                </div>
+
+                <div class="filters">
+
+                    <select id="brandFilter">
+                        <option value="all">All Brands</option>
+                        <option value="Toyota">Toyota</option>
+                        <option value="Lexus">Lexus</option>
+                        <option value="Mercedes">Mercedes-Benz</option>
+                        <option value="Honda">Honda</option>
+                        <option value="Hyundai">Hyundai</option>
+                    </select>
+
+                    <select id="typeFilter">
+                        <option value="all">All Types</option>
+                        <option value="SUV">SUV</option>
+                        <option value="Sedan">Sedan</option>
+                        <option value="Truck">Truck</option>
+                    </select>
+
+                    <select id="priceFilter">
+                        <option value="all">Any Price</option>
+                        <option value="under20">Under ₦20M</option>
+                        <option value="20to40">₦20M - ₦40M</option>
+                        <option value="over40">Over ₦40M</option>
+                    </select>
+
+                    <button onclick="filterCars()" class="search-button">
+                        Search Cars
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CARS -->
+    <section class="cars-section" id="cars">
+
+        <div class="container">
+
+            <div class="section-heading">
+                <div>
+                    <span class="section-label">OUR INVENTORY</span>
+                    <h2>Featured Vehicles</h2>
+                </div>
+
+                <p>
+                    Explore some of our carefully selected vehicles.
+                </p>
+            </div>
+
+            <div class="cars-grid" id="carsGrid">
+
+
+                <!-- CAR 1 -->
+                <article class="car-card"
+                    data-brand="Toyota"
+                    data-type="SUV"
+                    data-price="35">
+
+                    <div class="car-image">
+
+                        <img src="https://images.unsplash.com/photo-1553440569-bcc63803a83d?auto=format&fit=crop&w=1000&q=80"
+                             alt="Toyota SUV">
+
+                        <span class="car-tag">Foreign Used</span>
+
+                        <button class="heart-button">♡</button>
+
+                    </div>
+
+                    <div class="car-info">
+
+                        <span class="car-year">2022</span>
+
+                        <h3>Toyota Land Cruiser</h3>
+
+                        <p class="car-description">
+                            Clean foreign-used SUV with premium interior.
+                        </p>
+
+                        <div class="car-specs">
+                            <span>⚙ Automatic</span>
+                            <span>⛽ Petrol</span>
+                            <span>🛞 32k km</span>
+                        </div>
+
+                        <div class="car-bottom">
+
+                            <div>
+                                <small>Price</small>
+                                <strong>₦35,000,000</strong>
+                            </div>
+
+                            <button class="details-button"
+                                onclick="showCarDetails(
+                                'Toyota Land Cruiser',
+                                '2022',
+                                '₦35,000,000',
+                                'Foreign Used',
+                                'Automatic • Petrol • 32,000km',
+                                'https://images.unsplash.com/photo-1553440569-bcc63803a83d?auto=format&fit=crop&w=1000&q=80'
+                                )">
+                                View Details
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- CAR 2 -->
+                <article class="car-card"
+                    data-brand="Lexus"
+                    data-type="SUV"
+                    data-price="42">
+
+                    <div class="car-image">
+
+                        <img src="https://images.unsplash.com/photo-1616422285623-13ff0162193c?auto=format&fit=crop&w=1000&q=80"
+                             alt="Lexus SUV">
+
+                        <span class="car-tag">Foreign Used</span>
+
+                        <button class="heart-button">♡</button>
+
+                    </div>
+
+                    <div class="car-info">
+
+                        <span class="car-year">2023</span>
+
+                        <h3>Lexus RX 350</h3>
+
+                        <p class="car-description">
+                            Luxury SUV with advanced technology and comfort.
+                        </p>
+
+                        <div class="car-specs">
+                            <span>⚙ Automatic</span>
+                            <span>⛽ Petrol</span>
+                            <span>🛞 18k km</span>
+                        </div>
+
+                        <div class="car-bottom">
+
+                            <div>
+                                <small>Price</small>
+                                <strong>₦42,000,000</strong>
+                            </div>
+
+                            <button class="details-button"
+                                onclick="showCarDetails(
+                                'Lexus RX 350',
+                                '2023',
+                                '₦42,000,000',
+                                'Foreign Used',
+                                'Automatic • Petrol • 18,000km',
+                                'https://images.unsplash.com/photo-1616422285623-13ff0162193c?auto=format&fit=crop&w=1000&q=80'
+                                )">
+                                View Details
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- CAR 3 -->
+                <article class="car-card"
+                    data-brand="Mercedes"
+                    data-type="Sedan"
+                    data-price="38">
+
+                    <div class="car-image">
+
+                        <img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=1000&q=80"
+                             alt="Mercedes Benz">
+
+                        <span class="car-tag">Clean Used</span>
+
+                        <button class="heart-button">♡</button>
+
+                    </div>
+
+                    <div class="car-info">
+
+                        <span class="car-year">2021</span>
+
+                        <h3>Mercedes-Benz C300</h3>
+
+                        <p class="car-description">
+                            Stylish executive sedan with a refined interior.
+                        </p>
+
+                        <div class="car-specs">
+                            <span>⚙ Automatic</span>
+                            <span>⛽ Petrol</span>
+                            <span>🛞 28k km</span>
+                        </div>
+
+                        <div class="car-bottom">
+
+                            <div>
+                                <small>Price</small>
+                                <strong>₦38,000,000</strong>
+                            </div>
+
+                            <button class="details-button"
+                                onclick="showCarDetails(
+                                'Mercedes-Benz C300',
+                                '2021',
+                                '₦38,000,000',
+                                'Clean Used',
+                                'Automatic • Petrol • 28,000km',
+                                'https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=1000&q=80'
+                                )">
+                                View Details
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- CAR 4 -->
+                <article class="car-card"
+                    data-brand="Toyota"
+                    data-type="Sedan"
+                    data-price="19">
+
+                    <div class="car-image">
+
+                        <img src="https://images.unsplash.com/photo-1590362891991-f776e747a588?auto=format&fit=crop&w=1000&q=80"
+                             alt="Toyota Camry">
+
+                        <span class="car-tag">Nigerian Used</span>
+
+                        <button class="heart-button">♡</button>
+
+                    </div>
+
+                    <div class="car-info">
+
+                        <span class="car-year">2020</span>
+
+                        <h3>Toyota Camry XSE</h3>
+
+                        <p class="car-description">
+                            Reliable sedan with excellent fuel economy.
+                        </p>
+
+                        <div class="car-specs">
+                            <span>⚙ Automatic</span>
+                            <span>⛽ Petrol</span>
+                            <span>🛞 45k km</span>
+                        </div>
+
+                        <div class="car-bottom">
+
+                            <div>
+                                <small>Price</small>
+                                <strong>₦19,500,000</strong>
+                            </div>
+
+                            <button class="details-button"
+                                onclick="showCarDetails(
+                                'Toyota Camry XSE',
+                                '2020',
+                                '₦19,500,000',
+                                'Nigerian Used',
+                                'Automatic • Petrol • 45,000km',
+                                'https://images.unsplash.com/photo-1590362891991-f776e747a588?auto=format&fit=crop&w=1000&q=80'
+                                )">
+                                View Details
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- CAR 5 -->
+                <article class="car-card"
+                    data-brand="Honda"
+                    data-type="SUV"
+                    data-price="24">
+
+                    <div class="car-image">
+
+                        <img src="https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?auto=format&fit=crop&w=1000&q=80"
+                             alt="Honda SUV">
+
+                        <span class="car-tag">Foreign Used</span>
+
+                        <button class="heart-button">♡</button>
+
+                    </div>
+
+                    <div class="car-info">
+
+                        <span class="car-year">2022</span>
+
+                        <h3>Honda CR-V</h3>
+
+                        <p class="car-description">
+                            Spacious family SUV with excellent performance.
+                        </p>
+
+                        <div class="car-specs">
+                            <span>⚙ Automatic</span>
+                            <span>⛽ Petrol</span>
+                            <span>🛞 25k km</span>
+                        </div>
+
+                        <div class="car-bottom">
+
+                            <div>
+                                <small>Price</small>
+                                <strong>₦24,000,000</strong>
+                            </div>
+
+                            <button class="details-button"
+                                onclick="showCarDetails(
+                                'Honda CR-V',
+                                '2022',
+                                '₦24,000,000',
+                                'Foreign Used',
+                                'Automatic • Petrol • 25,000km',
+                                'https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?auto=format&fit=crop&w=1000&q=80'
+                                )">
+                                View Details
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- CAR 6 -->
+                <article class="car-card"
+                    data-brand="Hyundai"
+                    data-type="SUV"
+                    data-price="17">
+
+                    <div class="car-image">
+
+                        <img src="https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?auto=format&fit=crop&w=1000&q=80"
+                             alt="Hyundai SUV">
+
+                        <span class="car-tag">Clean Used</span>
+
+                        <button class="heart-button">♡</button>
+
+                    </div>
+
+                    <div class="car-info">
+
+                        <span class="car-year">2021</span>
+
+                        <h3>Hyundai Tucson</h3>
+
+                        <p class="car-description">
+                            Modern SUV with comfortable interior and smooth drive.
+                        </p>
+
+                        <div class="car-specs">
+                            <span>⚙ Automatic</span>
+                            <span>⛽ Petrol</span>
+                            <span>🛞 31k km</span>
+                        </div>
+
+                        <div class="car-bottom">
+
+                            <div>
+                                <small>Price</small>
+                                <strong>₦17,800,000</strong>
+                            </div>
+
+                            <button class="details-button"
+                                onclick="showCarDetails(
+                                'Hyundai Tucson',
+                                '2021',
+                                '₦17,800,000',
+                                'Clean Used',
+                                'Automatic • Petrol • 31,000km',
+                                'https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?auto=format&fit=crop&w=1000&q=80'
+                                )">
+                                View Details
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+            <p id="noCars" class="no-cars">
+                No vehicles match your search.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+    <section class="about-section" id="about">
+
+        <div class="container about-grid">
+
+            <div class="about-image">
+
+                <img src="https://images.unsplash.com/photo-1562141961-b9d2f5f9f8d4?auto=format&fit=crop&w=1000&q=80"
+                     alt="Luxury car dealership">
+
+                <div class="experience-card">
+                    <strong>5+</strong>
+                    <span>Years of Experience</span>
+                </div>
+
+            </div>
+
+            <div class="about-content">
+
+                <span class="section-label">ABOUT US</span>
+
+                <h2>
+                    Your Trusted Partner
+                    for Quality Cars in Lagos
+                </h2>
+
+                <p>
+                    At Lagos AutoHub, we believe buying a car should be
+                    simple, transparent and stress-free.
+                </p>
+
+                <p>
+                    We carefully source foreign-used and locally-used
+                    vehicles and provide our customers with honest
+                    information before every purchase.
+                </p>
+
+                <div class="about-points">
+
+                    <div>
+                        <span>✓</span>
+                        <p>Verified vehicle history</p>
+                    </div>
+
+                    <div>
+                        <span>✓</span>
+                        <p>Competitive prices</p>
+                    </div>
+
+                    <div>
+                        <span>✓</span>
+                        <p>Professional customer service</p>
+                    </div>
+
+                    <div>
+                        <span>✓</span>
+                        <p>Vehicle inspection available</p>
+                    </div>
+
+                </div>
+
+                <a href="#contact" class="primary-button">
+                    Talk To Us
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
   
-<a <a href="tel:07033819279" id="callButton">Call Us</a>
-</a>
-   <a href="https://wa.me/2347033819279" class="whatsapp-button">
-  WhatsApp Us
-   </a>
+  
+    <section class="why-section" id="why-us">
 
-   <form>
-      <label>Name</label>
-       <input type="text"placeholder="Enter your Name">
-        <label>Email</label>
-        <input type="text"placeholder="Enter your Email">
-     <select>
-         <option>Hair styling</option>
-           <option>Haircut</option>
-            <option>Dreadlocks</option>
-            <option>Braids</option>
-            <option>Manicure & Pedicure</option>
-              <option>Beard trim</option>
-     </select>
-            <label>Message</label>
-     <textarea placeholder="Tell us the service you want"></textarea>
-    
-     <button id="bookButton">Book Your Appointment</button>
-   </form>
-<h2>About Us</h2>
-   <p>FROSH EXECUTIVE SALON is a professional salon in Oye, Ekiti, offering quality haircuts, hairstyling, braids, dreadlocks, beard trims, manicure, pedicure, and other beauty services.</p>
+        <div class="container">
 
-<h2>Why Choose Us</h2>
-      <ul>
-         <li>Convenient booking</li>
-          <li>Experienced stylists</li>
-            <li>Clean environment</li>
-              <li>Professional service</li>
-      </ul>
+            <div class="section-heading centered">
 
-<h2>Opening hour</h2>
-    <p>Monday – Saturday: 8:00 AM – 10:00 PM</p>
+                <span class="section-label">WHY CHOOSE US</span>
 
- <h2>Location</h2> 
-    <p>📍 Falex Road, Oye, Ekiti</p>
+                <h2>Buying Your Next Car Should Feel Easy</h2>
 
-<footer>
-   <p>© 2026 Frosh Executive Salon</p>
-     <p>Oye, ekiti </p>
-</footer>
+                <p>
+                    We make the car-buying experience straightforward
+                    from selection to delivery.
+            
+            <script src="script.js"></script>
 
-<script src="script.js"></script>
- </body>
+</body>
 </html>
 
-     
+            
