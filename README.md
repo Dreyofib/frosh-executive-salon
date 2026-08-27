@@ -1,1 +1,0 @@
-# frosh-executive-salon
