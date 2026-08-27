@@ -1,5 +1,4 @@
-# frosh-executive-salon
-file:///data/user/0/com.foxdebug.acodefree/files/public/index.html<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
   <title>My project</title>
@@ -35,6 +34,7 @@ Whether you need a fresh haircut, a new hairstyle, or a complete beauty makeover
        <input type="text"placeholder="Enter your Name">
         <label>Email</label>
         <input type="text"placeholder="Enter your Email">
+     <label>Choose a service </label>
      <select>
          <option>Hair styling</option>
            <option>Haircut</option>
